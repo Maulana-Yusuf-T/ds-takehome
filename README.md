@@ -8,5 +8,5 @@
 
 ### **B. Modeling Section (Python)**:<br>
 1. Open the Jupyter Notebook file named **`B_modeling.ipynb`**.
-2. Before run this program, make sure that the data folder that consist **`credit_scoring.csv`** is exist or inside this folder.
+2. Before run this program, make sure that the **`data`** folder that consist **`credit_scoring.csv`** is exist or inside this folder.
 3. Run the model.
