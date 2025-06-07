@@ -81,7 +81,7 @@ ORDER BY customer_id, month
 SELECT
 	customer_id, -- Show the customer ID
 	DATE_TRUNC('month', order_date) AS month, -- Change the order date into first month
-	COUNT(DISTINCT order_id) AS order_count
-FROM e_commerce_transactions
-GROUP BY customer_id, DATE_TRUNC('month', order_date)
-HAVING COUNT (DISTINCT order_id) > 1;
+	COUNT(DISTINCT order_id) AS order_count -- Calculate how many distinct orders each customer receives each month.
+FROM e_commerce_transactions -- Take from the main table
+GROUP BY customer_id, DATE_TRUNC('month', order_date) -- Grouping based on customer_id and month
+HAVING COUNT (DISTINCT order_id) > 1; -- Only shows customers who placed multiple orders in the same month.
