@@ -79,8 +79,8 @@ ORDER BY customer_id, month
 
 -- Explain
 SELECT
-	customer_id,
-	DATE_TRUNC('month', order_date) AS month,
+	customer_id, -- Show the customer ID
+	DATE_TRUNC('month', order_date) AS month, -- Change the order date into first month
 	COUNT(DISTINCT order_id) AS order_count
 FROM e_commerce_transactions
 GROUP BY customer_id, DATE_TRUNC('month', order_date)
